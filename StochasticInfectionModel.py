@@ -104,7 +104,8 @@ def runmodel(t_max,moi,params,s=1,H=1000):
 			cell=np.where(np.random.multinomial(1,(1-(r/r_max))*n_a*Gamma_r/Gamma_R))[0][0]
 			r[cell]+=1
 			n_a[cell]-=1
-			n_ar[cell]+=1		
+			n_ar[cell]+=1
+			R+=1
 
 		###Calculate Time Step:
 		deltaT=np.random.exponential(1/Gamma_tot)
